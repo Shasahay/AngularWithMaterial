@@ -1,0 +1,97 @@
+.content div{
+    float: left;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.card {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    border-radius: 0;
+    width:100%;
+}
+.bg-flat-color-1 {
+    background: #ade689;
+}
+.bg-flat-color-2 {
+    background: #63c2de;
+}
+.bg-flat-color-3 {
+    background: #f7d05a;
+}
+.bg-flat-color-4 {
+    background: #ff9898;
+}
+.text-white {
+    color: #fff!important;
+}
+.card-body {
+    padding: 15px;
+    height: 107px;
+}
+.Page_title{
+    color: blueviolet;
+}
+.stat-icon {
+    vertical-align: top;
+}
+.status-box .status-icon i {
+    font-size: 30px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 100px;
+    padding: 15px;
+    font-weight: 900;
+    display: inline-block;
+}
+.status-box .status-content {
+    margin-left: 15px;
+    margin-top: 7px;
+}
+.status-text {
+    font-size: 14px;
+    color: #868e96;
+    width: 100%;
+}
+.status-digit {
+    font-size: 24px;
+    color: #373757;
+}
+.grey-bg {
+    background: #959696;
+}
+.wtt-mark {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 160px;
+    position: absolute;
+    top: 10px;
+    left: 40%;
+}
+.pro-footer{
+    padding: 12px 15px;
+    color: #888181;
+}
+.card-icon{
+    float: right;
+    font-size: 50px;
+    opacity: 0.4;
+    position: absolute;
+    right: 13px;
+    top: 23px;
+}
+.font18{
+    font-size: 18px;
+}
+.plain-card{
+    box-shadow: 2px 2px 5px #ccc;
+}

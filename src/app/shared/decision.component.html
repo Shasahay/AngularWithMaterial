@@ -1,0 +1,34 @@
+<mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{decision_title_label}}
+            </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-form-field class="example-full-width col-lg-4">
+              <input matInput placeholder="{{dec_ph_title}}" [(ngModel)]="title" required>
+            </mat-form-field>
+    
+            <mat-form-field class="example-full-width col-lg-4">
+            <input matInput placeholder="{{dec_content_label}}" [(ngModel)]="content" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width col-lg-4">
+                    <input matInput placeholder="{{dec_reason_label}}" [(ngModel)]="reason" required>
+            </mat-form-field>
+<br>
+            <mat-form-field class="date-field col-lg-4">
+                    <input matInput [matDatepicker]="stpicker" placeholder="{{dec_sdt_label}}" [value]="startDate"> 
+            </mat-form-field>
+            <mat-datepicker-toggle matSuffix [for]="stpicker"></mat-datepicker-toggle>
+            <mat-datepicker #stpicker></mat-datepicker>
+                    
+            <mat-form-field class="date-field col-lg-4">
+                    <input matInput [matDatepicker]="endpicker" placeholder="{{dec_edt_label}}" [value]="endDate"> 
+            </mat-form-field>
+            <mat-datepicker-toggle matSuffix [for]="endpicker"></mat-datepicker-toggle>
+            <mat-datepicker #endpicker></mat-datepicker>
+        </mat-expansion-panel>
+      </mat-accordion>
+    
+    

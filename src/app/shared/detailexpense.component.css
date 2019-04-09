@@ -1,0 +1,12 @@
+tr td {
+    vertical-align: middle !important;
+}
+tr span:not([class]) {
+    padding: 1rem 1rem;
+}
+
+.add-new-style{
+    font-size: 1.5em;
+    color:green;
+    cursor: pointer;
+}

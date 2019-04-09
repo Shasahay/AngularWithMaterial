@@ -1,0 +1,11 @@
+label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.dropdown[_ngcontent-c24] button[_ngcontent-c24]{
+    background: #673ab7;
+    color: #fff;
+}
+.mat-dialog-close{
+    background: red;
+}

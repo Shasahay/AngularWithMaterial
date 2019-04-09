@@ -1,0 +1,19 @@
+<mat-accordion>
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{application_title_label}}
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-form-field class="example-full-width col-lg-4">
+          <input matInput placeholder="{{application_appid_label}}" [value]="applicationId" readonly>
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-lg-4">
+          <input matInput placeholder="{{application_appname_label}}" [value]="applicationName" readonly>
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-lg-4">
+          <input matInput placeholder="{{application_department_label}}" [value]="departmentName" readonly>
+        </mat-form-field>
+    </mat-expansion-panel>
+  </mat-accordion>
+

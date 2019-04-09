@@ -1,0 +1,94 @@
+<div style="min-height: 100%;
+position: relative;
+display: block;
+width: 100%;">
+<app-menu></app-menu>
+<div class="col-lg-9 float-right panel-sec">
+    <h2 class="mt-5 Page_title"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>  Decision Making Process -<sub>Step2</sub></h2>
+    <app-submittorinfo class="mt-5 mb-3 d-block"></app-submittorinfo>
+    <app-applicationinfo class="mb-3 d-block"></app-applicationinfo>
+  <mat-accordion>
+    <mat-expansion-panel [expanded]="true" class="mb-3 d-block">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{decmk_pnl_title_label}}
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-form-field class="col-lg-4">
+          <mat-label>{{decmk_pnl_title_label}}</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let item of decisionLevelCollection" [value]=item.Id>{{item.Value}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{decmk_pnl_makerlist_label}}
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-form-field class="col-lg-4">
+          <input matInput placeholder="{{decmk_pc_dmcontroller_label}}" [value]="dmController">
+        </mat-form-field>
+
+        <mat-form-field class="col-lg-4">
+          <input matInput placeholder="{{decmk_pc_managmentdiv_label}}" [value]="maDivision">
+        </mat-form-field>
+<br>
+<br>
+        <span class="ribbon">{{decmk_approver_label}} :</span> <br>
+        <div id="divapprover" class="row" style="margin-top: 2em">
+        
+          
+            <div class="example-container">
+                <h5>{{decmk_allapprover_label}}</h5>
+              
+                <div
+                  cdkDropList
+                  #todoList="cdkDropList"
+                  [cdkDropListData]="todo"
+                  [cdkDropListConnectedTo]="[doneList]"
+                  class="example-list"
+                  (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+                </div>
+              </div>
+              
+              <div class="example-container">
+                <h5>{{decmk_yourapprover_label}}</h5>
+              
+                <div
+                  cdkDropList
+                  #doneList="cdkDropList"
+                  [cdkDropListData]="done"
+                  [cdkDropListConnectedTo]="[todoList]"
+                  class="example-list"
+                  (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+                </div>
+              </div>
+
+            
+        </div>
+
+        <mat-form-field class="col-lg-4">
+            <input matInput placeholder="{{decmk_pc_hddevision_label}}" [value]="headDivision">
+          </mat-form-field>
+  
+          <mat-form-field class="col-lg-4">
+            <input matInput placeholder="{{decmk_pc_govcomitte_label}}" [value]="decisionLevel">
+          </mat-form-field>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <div class="row pull-right">
+    <span class="btn btn-info m-5 pb-1" (click)="submitRequest()"><i class="fa fa-check pr-1"></i> {{decmk_submit_label}}</span>
+  </div>
+
+
+</div>

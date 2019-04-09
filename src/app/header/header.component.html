@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+  <div class="left-section float-left col-lg-9">
+ <span class="logo col-lg-2"> 
+   <img class="align-self-center mr-3" alt="Company Logo" src="../assets/Image/Logo-nz.png">
+  </span>
+  <span class="col-lg-10 d-inline-block text-center app_name">{{appTitle}}</span>
+      <span class="example-fill-remaining-space"></span>
+      <span class="align-center"></span>
+      <span class="example-spacer"></span>
+      <!--<button mat-button>{{header_about_label}}</button>
+      <button mat-button>{{header_contact_label}}</button>-->
+    </div>
+    <div class="float-right right-menu">
+      <span class="pull-right-ext font16 pr-4"><i class="fa fa-user-circle pr-2"></i>{{userName}}</span>
+      <mat-form-field class="header-select">
+        <mat-select  placeholder='select language' (selectionChange)="selectedLang($event)">
+          <mat-option *ngFor="let lang of Languages" [value]="lang">{{lang}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+      <!-- <mat-form-field>
+          <mat-select placeholder="select Language" (selectionChange)="selectedLang($event)">
+              <mat-option *ngFor = "let lang  of actItems" [value]="act">{{act}}</mat-option>
+          </mat-select>
+      </mat-form-field> -->
+   </mat-toolbar-row>   
+  </mat-toolbar>

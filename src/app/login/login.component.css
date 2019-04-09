@@ -1,0 +1,13 @@
+.form-content{
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+}
+.mt-60{
+    margin-top:60px;
+}
+.mat-card-header > .mat-card-header-text{
+    width: 100%;
+}

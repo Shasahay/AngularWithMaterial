@@ -1,0 +1,21 @@
+<mat-accordion>
+    <mat-expansion-panel [expanded]="true" class="coll-sec">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{submittor_title_label}}
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-form-field class="example-full-width col-lg-4">
+          <input matInput placeholder="{{submittor_subid_label}}" [value]="submittorId" readonly>
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-lg-4">
+        <input matInput placeholder="{{submitor_subname_label}}" [value]="SubmitterName" readonly>
+        </mat-form-field>
+        <mat-form-field class="date-field col-lg-4">
+          <input matInput [matDatepicker]="picker" placeholder="{{submitor_date_label}}"> 
+        </mat-form-field>
+    <mat-datepicker-toggle matSuffix [for]="picker" class="calendar-icon"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    </mat-expansion-panel>
+  </mat-accordion>
+

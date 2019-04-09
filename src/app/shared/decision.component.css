@@ -1,0 +1,9 @@
+
+.panel-sec .mat-expansion-panel-header{
+    height: 53px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+.date-field.col-lg-4{
+    width: 28%;
+    padding-right: 0px;
+}

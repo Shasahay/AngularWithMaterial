@@ -1,0 +1,36 @@
+html{
+    min-height:100%;
+    }
+    body,.side_menu,.side_menu > .mat-card{ 
+       float: left;
+        display: block;
+        min-height: 100%;
+        position: absolute;
+        width: 100%;
+}
+.side_menu .mat-card{
+    background: #f1f0f3;
+    border-radius: 0px;
+}
+
+.submenu_style{
+    cursor: pointer;
+    text-decoration: none;
+    color: #f1f0f3
+}
+
+.menu_bc_color{
+    background-color: #58578ca3 
+}
+
+
+.menu_text_color{
+    color: #f1f0f3
+}
+
+
+
+.menu_bc_color a:hover{
+    background-color: #58578ca3;
+    
+}

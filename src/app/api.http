@@ -1,0 +1,13 @@
+
+###
+
+
+POST https://prod-19.southindia.logic.azure.com:443/workflows/970194ff5a6144b6a43451e806200412/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=DvQLW58UGO-wxO6gcXtbGkhtfc5586qdCmhxMJluYpA HTTP/1.1
+content-type: application/json
+Accept : json
+
+{
+    "ApplicantID":50123,
+    "ApplicantName":"Shashank", 
+    "ApplicantEmail": "Shashank.Sahay@test.com"
+}

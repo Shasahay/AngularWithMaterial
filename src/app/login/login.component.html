@@ -1,0 +1,29 @@
+<div class="container col-lg-6 mt-60">
+   <mat-card class="example-card form-content">
+    <mat-card-header >
+      <!-- <mat-card-title >{{login_title}}</mat-card-title> -->
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form">
+        <table class="example-full-width col-lg-12" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width col-lg-6">
+              <input matInput placeholder="{{placeholder_login_userName}}" [(ngModel)]="userName" name="username" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+          <td><mat-form-field class="example-full-width col-lg-6">
+            <input matInput placeholder="{{placeholder_login_password}}" [(ngModel)]="password"type="password" name="password" required>
+          </mat-form-field></td>
+        </tr></table>
+      </form>
+      <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="login()" color="primary">Login</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

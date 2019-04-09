@@ -1,0 +1,14 @@
+
+.panel-sec .mat-expansion-panel-header{
+    height: 53px;
+    box-shadow: 2px 2px 2px #ccc;
+}
+.create_btn{
+    width: 235px;
+    margin: 0px auto;
+    float: none;
+    margin-bottom: 20px;
+}
+.Page_title {
+    color: blueviolet;
+}

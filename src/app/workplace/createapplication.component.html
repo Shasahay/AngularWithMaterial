@@ -1,0 +1,54 @@
+<div style="min-height: 100%;
+position: relative;
+display: block;
+width: 100%;"> 
+<app-menu></app-menu>
+<div class="col-lg-9 float-right panel-sec">
+    <h2 class="mt-5 Page_title"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>  {{dm_title_label}} </h2>
+  <app-submittorinfo class="mt-5 mb-3 d-block"></app-submittorinfo>
+  <app-applicationinfo class="mb-3 d-block"></app-applicationinfo>
+
+<mat-accordion>
+    <mat-expansion-panel class="mb-3 d-block">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{dm_title_label}}
+        </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-form-field class="example-full-width col-lg-2">
+            <input matInput placeholder="{{dm_activitytype_label}}" readonly [(ngModel)]="activityType">
+            
+        </mat-form-field>
+        <button mat-button mat-raised-button (click)="openDialog()">{{dm_search_label}}</button>
+        
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <mat-form-field class=" col-lg-4">
+            <input matInput placeholder="{{dm_decisionitem_label}}" [(ngModel)]='actDecItem' required>
+        </mat-form-field>
+        
+        <mat-form-field class=" col-lg-4">
+            <input matInput placeholder="{{dm_subitem_label}}">
+        </mat-form-field>
+      <br />
+          <span class="col-md-5">{{dm_group_label}} : <mat-checkbox></mat-checkbox></span>
+        
+            <span class="col-md-5">{{dm_gift_label}} :  
+          <mat-radio-group>
+            <mat-radio-button value="true">{{dm_yes_label}}</mat-radio-button>
+            <mat-radio-button value="false">{{dm_no_label}}</mat-radio-button>
+          </mat-radio-group>
+        </span>
+        
+    </mat-expansion-panel>
+</mat-accordion>
+  
+<app-decision class="mb-3 d-block"></app-decision>  
+
+<app-detailexpenseinfo class="mb-3 d-block"></app-detailexpenseinfo>
+   <div class="row pull-right create_btn">
+     <a class="btn btn-success" routerLink=""><i class="fa fa-save pr-1"></i>{{crapp_btnsave_label}}</a>
+     &nbsp;&nbsp;
+     <a class="btn btn-primary" routerLink="decisionmakingprocess"><i class="fa fa-arrow-circle-right pr-1" aria-hidden="true"></i> {{crapp_btnnext_label}}</a>
+   </div>
+</div>
+</div>

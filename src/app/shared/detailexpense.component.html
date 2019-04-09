@@ -1,0 +1,70 @@
+<mat-accordion>
+  <mat-expansion-panel aria-expanded="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{dtl_panel_header_label}}</mat-panel-title>
+    </mat-expansion-panel-header>
+
+<!-- Editable table -->
+<div class="card">
+    
+  <div class="card-body">
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2">
+        <a class="text-success" (click)="add()">
+          
+        </a>
+      </span>
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <tr>
+          <th class="text-center">{{dtl_tbl_hdr1_label}}</th>
+          <th class="text-center">{{dtl_tbl_hdr2_label}}</th>
+          <th class="text-center">{{dtl_tbl_hdr3_label}}</th>
+          <th class="text-center">{{dtl_tbl_hdr4_label}}</th>
+          <th class="text-center">{{dtl_tbl_hdr5_label}}</th>
+          <th class="text-center">{{dtl_tbl_hdr6_label}}</th>
+        </tr>
+        <tr *ngFor="let expense of detailsExpenses; let id = index">
+          <td>
+
+              <mat-select>
+                  <mat-option *ngFor="let item of expense.name" [value]=item.itemname>{{item.itemname}}</mat-option>
+              </mat-select>
+            <!-- <span (keyup)="changeValue(id, 'name', $event)" (blur)="updateList(id, 'name', $event)" contenteditable="true">{{person.name}}</span> -->
+          </td>
+          <td>
+
+              <mat-select>
+                  <mat-option *ngFor="let item of expense.costcenters" [value]=item.costItemName>{{item.costItemName}}</mat-option>
+              </mat-select>
+            <!-- <span contenteditable="true" (keyup)="changeValue(id, 'age', $event)" (blur)="updateList(id, 'age', $event)">{{person.age}}</span> -->
+          </td>
+          <td>
+            <span contenteditable="true" (keyup)="changeValue(id, 'thisfiscal', $event)" (blur)="updateList(id, 'thisfiscal', $event)">{{expense.thisfiscal}}</span>
+          </td>
+          <td>
+            <span contenteditable="true" (keyup)="changeValue(id, 'nextfiscal', $event)" (blur)="updateList(id, 'nextfiscal', $event)">{{expense.nextfiscal}}</span>
+          </td>
+          <td>
+            <span contenteditable="true" (keyup)="changeValue(id, 'otherfiscal', $event)" (blur)="updateList(id, 'otherfiscal', $event)">{{expense.otherfiscal}}</span>
+          </td>
+          
+          <td>
+              <span class="table-remove">
+                  <span class="btn btn-danger" (click)="remove(id)"><i class="fa fa-trash text-white" aria-hidden="true"></i></span>
+                </span>
+          </td>
+        </tr>
+        <tfoot><th></th><th>Sum</th><th></th><th></th><th></th></tfoot>
+      </table>
+    </div>
+    <i class="fa fa-plus add-new-style" aria-hidden="true" (click)="add()"></i>
+  </div>
+</div>
+<!-- Editable table -->
+
+
+
+  </mat-expansion-panel>
+</mat-accordion>
+
+
